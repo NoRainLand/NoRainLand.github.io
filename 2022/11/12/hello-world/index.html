@@ -3,14 +3,14 @@
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="yanm1ng&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
+  <meta name="description" content="NoRain&#39;s blog">
+  <meta name="keyword" content="NoRainLand,NoRain,Burn and Rave">
   
     <link rel="shortcut icon" href="/css/images/logo.png">
   
   <title>
     
-      Hello World | Hexo
+      Hello World | Burn&amp;Rave
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -18,6 +18,10 @@
   <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   
 <link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/css/plugins/gitment.css">
 
   
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,6 +32,10 @@
 <script src="/js/qrious.js"></script>
 
   
+  
+    
+<script src="/js/gitment.js"></script>
+
   
   
   
@@ -70,7 +78,7 @@
   <div class="header-container">
     <a class="home-link" href="/">
       <div class="logo"></div>
-      <span>Hexo</span>
+      <span>Burn&Rave</span>
     </a>
     <ul class="right-list">
       
@@ -222,7 +230,7 @@
     
     <!-- NAV END -->
     <!-- 打赏 START -->
-    
+    <!-- 
       <div class="money-like">
         <div class="reward-btn">
           赏
@@ -239,7 +247,7 @@
         </div>
         <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
       </div>
-    
+     -->
     <!-- 打赏 END -->
     <!-- 二维码 START -->
     
@@ -250,15 +258,9 @@
     
     <!-- 二维码 END -->
     
-      <!-- Utterances START -->
-      <div id="utterances"></div>
-      <script src="https://utteranc.es/client.js"
-        repo=""
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async></script>    
-      <!-- Utterances END -->
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
     
   </article>
   <!-- Article END -->
@@ -278,7 +280,7 @@
 
 <script>
   (function () {
-    var url = 'http://example.com/2022/11/12/hello-world/';
+    var url = 'https://burnandrave.top/2022/11/12/hello-world/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -335,6 +337,34 @@
   </script>
 
 
+
+  <script>
+    var gitmentConfig = "NoRain";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Hello World",
+        owner: "NoRain",
+        repo: "NoRainLand.github.io",
+        oauth: {
+          client_id: "c8d0c9aba396dc8907c4",
+          client_secret: "ab110c79f8ced300ee5eab477f445fa771288ee0"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
 
 
 

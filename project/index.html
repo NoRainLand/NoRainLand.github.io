@@ -3,14 +3,14 @@
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="yanm1ng&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
+  <meta name="description" content="NoRain&#39;s blog">
+  <meta name="keyword" content="NoRainLand,NoRain,Burn and Rave">
   
     <link rel="shortcut icon" href="/css/images/logo.png">
   
   <title>
     
-      Project | Hexo
+      Project | Burn&amp;Rave
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -18,6 +18,10 @@
   <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   
 <link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/css/plugins/gitment.css">
 
   
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,6 +32,10 @@
 <script src="/js/qrious.js"></script>
 
   
+  
+    
+<script src="/js/gitment.js"></script>
+
   
   
   
@@ -70,7 +78,7 @@
   <div class="header-container">
     <a class="home-link" href="/">
       <div class="logo"></div>
-      <span>Hexo</span>
+      <span>Burn&Rave</span>
     </a>
     <ul class="right-list">
       
@@ -200,7 +208,7 @@
 </main>
 <script>
   (function() {
-    var url = 'http://example.com/project/index.html';
+    var url = 'https://burnandrave.top/project/index.html';
     $('#article-banner').geopattern(url);
     $('.header').removeClass('fixed-header')
     $.ajax({
@@ -208,7 +216,7 @@
         Accept: 'application/vnd.github.v3.raw'
       },
       type: 'get',
-      url: 'https://api.github.com/users/yanm1ng/repos',
+      url: 'https://api.github.com/users/NoRain/repos',
       success: function (data) {
         var repos = data.sort(function(a, b) {
           return (b.stargazers_count - a.stargazers_count)
