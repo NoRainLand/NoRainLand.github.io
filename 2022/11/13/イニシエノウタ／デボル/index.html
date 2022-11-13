@@ -213,13 +213,31 @@
 <span id="more"></span>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4937720&auto=1&height=66"></iframe>
 ---
-<!-- 引用文章 -->
-引用文章:
-    <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>引用文章</span></div><code class="language-markup">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>醉后不知天在水，满船清梦压星河。
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>元代唐珙 《题龙阳县青草湖》<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span>
-    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<!-- 代码块 -->
+代码块:
+<pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>代码块</span></div><code class="language-markup">    &#123;% codeblock 标题 lang:语言 %&#125;
+        代码
+    &#123;% endblockquote %&#125;
+````
+上面是hexo的内置语法,一切很好,只要你写的是JS/HTML语法,但是如果你写的是hexo的内置语法,比如
 
+```html 代码块
+    &#123;% codeblock 标题 lang:语言 %&#125;
+        &#123;% post_link 遺サレタ場所-斜光 %&#125;
+    &#123;% endblockquote %&#125;
+````
+就会被错误地编译,所以请使用md语法:
+
+```html 代码块
+    ``` 语言 标题
+    代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+````
+---
+
+<!-- 引用文章 -->
+<p>引用文章:<br>    <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>引用文章</span></div><code class="language-markup">&#123;% blockquote 元代唐珙 《题龙阳县青草湖》 %&#125;
+    醉后不知天在水，满船清梦压星河。
+&#123;% endblockquote %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
 <blockquote><p>醉后不知天在水，满船清梦压星河。</p>
 <footer><strong>元代唐珙 《题龙阳县青草湖》</strong></footer></blockquote>
 <hr>
@@ -234,8 +252,7 @@
 <p>外链播放器代码:</p>
 <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>外链播放器</span><a target="_blank" rel="noopener" href="https://music.163.com/">link</a></div><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">frameborder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">marginwidth</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">marginheight</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>330</span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>86</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//music.163.com/outchain/player?type=2&amp;id=4937720&amp;auto=1&amp;height=66<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="效果如文章开头"><a href="#效果如文章开头" class="headerlink" title="效果如文章开头"></a>效果如文章开头</h2><!-- 引用文章 -->
-<p>引用自己的文章:<br>     <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>自己的文章</span></div><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/2022/11/12/%E9%81%BA%E3%82%B5%E3%83%AC%E3%82%BF%E5%A0%B4%E6%89%80-%E6%96%9C%E5%85%89/<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>遺サレタ場所<span class="token entity" title="&#x2F;">&amp;#x2F;</span>斜光<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>遺サレタ場所<span class="token entity" title="&#x2F;">&amp;#x2F;</span>斜光<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<p>引用自己的文章:<br>    <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>自己的文章</span></div><code class="language-markup">&#123;% post_link 遺サレタ場所-斜光 %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
 <h2 id="详情请看这篇文章"><a href="#详情请看这篇文章" class="headerlink" title="详情请看这篇文章:"></a>详情请看这篇文章:<a href="/2022/11/12/%E9%81%BA%E3%82%B5%E3%83%AC%E3%82%BF%E5%A0%B4%E6%89%80-%E6%96%9C%E5%85%89/" title="遺サレタ場所&#x2F;斜光">遺サレタ場所&#x2F;斜光</a></h2><!-- 插入图片 -->
 <p>接下来使用代码尝试插入一张图片</p>
 <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>插入图片</span></div><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./../img/97224444_p0_master1200.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>390<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>600<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>お待たせしました<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>お待たせしました<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -248,9 +265,7 @@
 
 
 <!-- 引用视频并且 禁止 YouTube cookie -->
-<p>插入视频演示:</p>
-<pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>插入youtube视频</span></div><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>video-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.youtube.com/embed/videoseries?list=sFqZHm6b3uU<span class="token punctuation">"</span></span> <span class="token attr-name">frameborder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span> <span class="token attr-name">allowfullscreen</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果:</p>
+<p>插入视频演示:<br>    <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>插入youtube视频</span></div><code class="language-markup">&#123;% youtube sFqZHm6b3uU  false %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>效果:</p>
 <div class="video-container"><iframe src="https://www.youtube.com/embed/videoseries?list=sFqZHm6b3uU" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 <p>好嘛,上面的这句话依旧不好使,我思索了一下找不到问题出在哪.那就先手动使用下面这句吧</p>
 <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>插入youtube视频</span></div><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//www.youtube.com/embed/sFqZHm6b3uU<span class="token punctuation">"</span></span>  <span class="token attr-name">frameborder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span> <span class="token attr-name">allowfullscreen</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -259,7 +274,7 @@
 ---
 <!-- 插入 source/downloads/code 文件夹内的代码文件 -->
 最后展示一下我的代码段:
-<pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>代码片段</span></div><code class="language-markup">    <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>代码片段</span></div><code class="language-markup">&#123;% include_code lang:javascript from:3 to:15 TestCode.js %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <pre class="line-numbers language-javascript" data-language="javascript"><div class="caption"><span>TestCode.js</span><a href="/downloads/code/TestCode.js">view raw</a></div><code class="language-javascript"><span class="token operator">*</span> @Date<span class="token operator">:</span> <span class="token number">2022</span><span class="token operator">-</span><span class="token number">11</span><span class="token operator">-</span><span class="token number">13</span> <span class="token number">11</span><span class="token operator">:</span><span class="token number">40</span><span class="token operator">:</span><span class="token number">29</span>
  <span class="token operator">*</span> @Last Modified by<span class="token operator">:</span> NoRain
