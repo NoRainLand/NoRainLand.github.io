@@ -84,7 +84,7 @@
       
         <li class="list-item">
           
-            <a href="/" class="item-link active">Home</a>
+            <a href="/" class="item-link">Home</a>
           
         </li>
       
@@ -136,7 +136,7 @@
         
           <li class="menu-item">
             
-              <a href="/" class="menu-link mobile-active">Home</a>
+              <a href="/" class="menu-link">Home</a>
             
           </li>
         
@@ -199,75 +199,48 @@
   </div>
 </header>
 
-    <main class="app-body">
+    <div id="article-banner">
+  <h2>Archives</h2>
+  <p class="post-date">Archives</p>
+</div>
+<main class="app-body" id="archives">
   
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2022/11/13/%E3%82%A4%E3%83%8B%E3%82%B7%E3%82%A8%E3%83%8E%E3%82%A6%E3%82%BF%EF%BC%8F%E3%83%87%E3%83%9C%E3%83%AB/">イニシエノウタ／デボル</a>
-      </h2>
-      <p class="article-date">2022年11月13日</p>
-      
-        
-  <a href="/tags#Hexo" >
-    <span class="tag-code">Hexo</span>
-  </a>
-
-  <a href="/tags#测试" >
-    <span class="tag-code">测试</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          <h2 id="稍微尝试一下hexo的语法"><a href="#稍微尝试一下hexo的语法" class="headerlink" title="稍微尝试一下hexo的语法"></a>稍微尝试一下hexo的语法</h2><p>对着文档<b>尝试</b>一下hexo的各种语法,以便后面参考.</p>
-        
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2022
+  </h1>
+  <div class="section-list">
+    
+    
+      <div class="section-list-item">
+        <a href="/2022/11/13/%E3%82%A4%E3%83%8B%E3%82%B7%E3%82%A8%E3%83%8E%E3%82%A6%E3%82%BF%EF%BC%8F%E3%83%87%E3%83%9C%E3%83%AB/" class="archive-title">イニシエノウタ／デボル</a>
+        <p class="archive-date">11-13</p>
       </div>
-      <a class="more" href="/2022/11/13/%E3%82%A4%E3%83%8B%E3%82%B7%E3%82%A8%E3%83%8E%E3%82%A6%E3%82%BF%EF%BC%8F%E3%83%87%E3%83%9C%E3%83%AB/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2022/11/12/%E9%81%BA%E3%82%B5%E3%83%AC%E3%82%BF%E5%A0%B4%E6%89%80-%E6%96%9C%E5%85%89/">遺サレタ場所/斜光</a>
-      </h2>
-      <p class="article-date">2022年11月12日</p>
-      
-      <div class="article-summary">
-        
-          并非所有的故事都有喜欢的结局
-
-一首很喜欢的歌曲.
-落叶传来消息,老家母亲被隔离了,还是挺担心的.
-老实说,新冠这玩意儿,我依旧不太了解,我对其的认知停留在:及时治疗可以治愈,死亡率不算高,最大的问题在于后遗症不明确.
-现在准备天冷了,估计新冠会再次爆发,现在广州每日新增都十分疯狂,我有好几 ...
-        
+    
+      <div class="section-list-item">
+        <a href="/2022/11/12/%E9%81%BA%E3%82%B5%E3%83%AC%E3%82%BF%E5%A0%B4%E6%89%80-%E6%96%9C%E5%85%89/" class="archive-title">遺サレタ場所/斜光</a>
+        <p class="archive-date">11-12</p>
       </div>
-      <a class="more" href="/2022/11/12/%E9%81%BA%E3%82%B5%E3%83%AC%E3%82%BF%E5%A0%B4%E6%89%80-%E6%96%9C%E5%85%89/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2022/11/12/Suzume-no-Tojimari-feat-Pealeaf/">Suzume no Tojimari (feat. Pealeaf)</a>
-      </h2>
-      <p class="article-date">2022年11月12日</p>
-      
-      <div class="article-summary">
-        
-          默默在雨中摇曳
-
-本来呢,这个域名几天前已经绑定好了,就差弄个博客上去了,但是我比较懒,所以一直没有动手.
-前几天听到一首歌儿,开头的dulululu吸引到我了,一种悠然自得的情绪油然而生,于是便折腾了一下这个blog.
-中途也遇到一些小问题,比如:
-移除nvm,选择nvs,nvm和nvs有 ...
-        
+    
+      <div class="section-list-item">
+        <a href="/2022/11/12/Suzume-no-Tojimari-feat-Pealeaf/" class="archive-title">Suzume no Tojimari (feat. Pealeaf)</a>
+        <p class="archive-date">11-12</p>
       </div>
-      <a class="more" href="/2022/11/12/Suzume-no-Tojimari-feat-Pealeaf/">Read more</a>
-    </article>
-  
-
+    
+  </div>
+</section>
   
 </main>
 
-
+<script>
+  (function () {
+    var url = 'https://burnandrave.top/tags/测试/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
+  })();
+</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
