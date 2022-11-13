@@ -215,29 +215,28 @@
 ---
 <!-- 代码块 -->
 代码块:
-<pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>代码块</span></div><code class="language-markup">    &#123;% codeblock 标题 lang:语言 %&#125;
-        代码
-    &#123;% endblockquote %&#125;
-````
+<pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>代码块</span></div><code class="language-markup">&#123;% codeblock 标题 lang:语言 %&#125;
+    代码
+&#123;% endblockquote %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 上面是hexo的内置语法,一切很好,只要你写的是JS/HTML语法,但是如果你写的是hexo的内置语法,比如
 
-```html 代码块
-    &#123;% codeblock 标题 lang:语言 %&#125;
-        &#123;% post_link 遺サレタ場所-斜光 %&#125;
-    &#123;% endblockquote %&#125;
-````
-就会被错误地编译,所以请使用md语法:
-
-```html 代码块
-    ``` 语言 标题
-    代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-````
+<pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>代码块</span></div><code class="language-markup">&#123;% codeblock 标题 lang:语言 %&#125;
+    &#123;% post_link 遺サレタ場所-斜光 %&#125;
+&#123;% endblockquote %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>就会被错误地编译,可以使用md语法:</p>
+<pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>代码块</span></div><code class="language-markup">``` 语言 标题
+代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">
+然而,各有各的问题,md语法,没有象对应的提示框,除非特殊需求,不然还是使用hexo的内置语法吧.
 ---
 
-<!-- 引用文章 -->
-<p>引用文章:<br>    <pre class="line-numbers language-markup" data-language="markup"><div class="caption"><span>引用文章</span></div><code class="language-markup">&#123;% blockquote 元代唐珙 《题龙阳县青草湖》 %&#125;
-    醉后不知天在水，满船清梦压星河。
-&#123;% endblockquote %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
+&lt;!-- 引用文章 --&gt;
+引用文章:
+    &#96;&#96;&#96; html 引用文章 
+        &#123;% blockquote 元代唐珙 《题龙阳县青草湖》 %&#125;
+            醉后不知天在水，满船清梦压星河。
+        &#123;% endblockquote %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote><p>醉后不知天在水，满船清梦压星河。</p>
 <footer><strong>元代唐珙 《题龙阳县青草湖》</strong></footer></blockquote>
 <hr>
