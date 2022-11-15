@@ -1,299 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="NoRainLand&#39;s blog">
-  <meta name="keyword" content="NoRainLand,NoRain,Burn and Rave">
-  
-    <link rel="shortcut icon" href="/css/images/logo.png">
-  
-  <title>
-    
-      Burn&amp;Rave
-    
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
+<html lang="en">
+		<!-- 文件头 引入css JS -->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Burn&amp;Rave</title>
+	<link rel="Bookmark" type="image/x-icon" href="/img/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link
+		rel="shortcut icon"
+		type="image/x-icon"
+		href="/img/favicon.ico"
+	/>
+	
 <link rel="stylesheet" href="/css/style.css">
+ 
+	
+<script src="/js/jquery-3.6.1.js"></script>
 
-  
-    
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
-    
-<script src="/js/qrious.js"></script>
-
-  
-  
-    
-<script src="/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
-
-
-  
-  
-    
-<script src="/js/local-search.js"></script>
-
+	
+<script src="/js/theme.js"></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/">
-      <div class="logo"></div>
-      <span>Burn&Rave</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/" class="item-link">Home</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/series/" class="item-link">Series</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/tags/" class="item-link">Tags</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/project/" class="item-link">Projects</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/about/" class="item-link">About</a>
-          
-        </li>
-      
-      
-        <li class="menu-item menu-item-search right-list">
-    <a role="button" class="popup-trigger">
-        <i class="fa fa-search fa-fw"></i>
-    </a>
-</li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/" class="menu-link">Home</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/series/" class="menu-link">Series</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/tags/" class="menu-link">Tags</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/archives/" class="menu-link">Archives</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/project/" class="menu-link">Projects</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/about/" class="menu-link">About</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-    
-      <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-            <span class="search-icon">
-                <i class="fa fa-search"></i>
-            </span>
-            <div class="search-input-container">
-                <input autocomplete="off" autocapitalize="off"
-                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
-                    type="search" class="search-input">
-            </div>
-            <span class="popup-btn-close">
-                <i class="fa fa-times-circle"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
-    </div>
-</div>
-    
-  </div>
+
+
+	<body>
+		<!-- logo以及目录 -->
+<header>
+	<div class="header">
+		<h1 class="logo">
+			<a href="/" class="title">Burn&amp;Rave</a>
+		</h1>
+		<nav id="nav_top">
+			<ul id="menu_tip">
+				<li id="menu_item">
+					<a href="/archives" class="archives">Archive</a>
+				</li>
+				<li id="menu_item">
+					<a href="/about" class="about">About</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">Archives</p>
+		<!-- 主体 -->
+<div class="mainbody">
+    
 </div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2022
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2022/11/13/%E3%82%A4%E3%83%8B%E3%82%B7%E3%82%A8%E3%83%8E%E3%82%A6%E3%82%BF%EF%BC%8F%E3%83%87%E3%83%9C%E3%83%AB/" class="archive-title">イニシエノウタ／デボル</a>
-        <p class="archive-date">11-13</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2022/11/12/%E9%81%BA%E3%82%B5%E3%83%AC%E3%82%BF%E5%A0%B4%E6%89%80-%E6%96%9C%E5%85%89/" class="archive-title">遺サレタ場所/斜光</a>
-        <p class="archive-date">11-12</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2022/11/12/Suzume-no-Tojimari-feat-Pealeaf/" class="archive-title">Suzume no Tojimari (feat. Pealeaf)</a>
-        <p class="archive-date">11-12</p>
-      </div>
-    
-  </div>
-</section>
-  
-</main>
 
-<script>
-  (function () {
-    var url = 'https://burnandrave.top/tags/测试/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
-</script>
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
-</div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2022 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
-    
-  </p>
+		<!-- 页脚,作者以及主题作者,版权 -->
+<footer>
+	<div class="footer">
+		<div class="verse">Do not go gentle into that good night,Old age should burn and rave at close of day;Rage, rage against the dying of the light. </div>
+		<span class="copyright_year">
+			©️    2022
+			<span class="footer_author">NoRain</span>
+			<span class="power_by">
+				Powered by
+				<a class="hexo_link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+				and
+				<a class="theme_link" target="_blank" rel="noopener" href="https://github.com/NoRainLand">NoRainLand</a>
+			</span>
+		</span>
+	</div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
+		<!-- 返回底部 -->
+<div class="back_to_top" id="back_to_top">
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke="currentColor"
+		stroke-width="3"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		class="arrow_up"
+	>
+		<line x1="12" y1="19" x2="12" y2="5"></line>
+		<polyline points="5 12 12 5 19 12"></polyline>
+	</svg>
+</div>
 
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      hljs.configure({useBR: true});
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
+	</body>
+	
+<script src="/js/bootstrap.js"></script>
 
-
-<script src="/js/script.js"></script>
-
-
-  </body>
 </html>
