@@ -76,7 +76,14 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  text-decoration: none;
+  color: rgba(43, 122, 128, 0.808);
+  transition-property: padding-right;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s; }
+  a:hover {
+    color: rgba(43, 122, 128, 0.808); }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -168,13 +175,6 @@ figure {
 /**
  * Address differences between Firefox and other browsers.
  */
-hr {
-  margin-top: 52px;
-  margin-bottom: 42px;
-  display: block;
-  border: 0;
-  text-align: center; }
-
 /**
  * Contain overflow in all browsers.
  */
@@ -359,8 +359,8 @@ th {
   padding: 0; }
 
 sup {
-  font-size: .6em;
-  opacity: .6; }
+  font-size: 0.6em;
+  opacity: 0.6; }
 
 p {
   text-align: justify; }
@@ -428,7 +428,7 @@ body {
     margin: 0; }
   .header .title {
     text-decoration: none;
-    color: #368ccb;
+    color: #2b7a80;
     font-size: 2rem; }
   .header .archives {
     text-decoration: none;
@@ -488,7 +488,7 @@ body {
     transition-timing-function: ease-out;
     transition-duration: 0.2s; }
     .guide_pager .page_prev:hover {
-      color: rgba(54, 141, 203, 0.801);
+      color: rgba(43, 122, 128, 0.808);
       padding-left: 0px; }
   .guide_pager .page_next {
     text-decoration: none;
@@ -502,7 +502,7 @@ body {
     transition-timing-function: ease-out;
     transition-duration: 0.2s; }
     .guide_pager .page_next:hover {
-      color: rgba(54, 141, 203, 0.801);
+      color: rgba(43, 122, 128, 0.808);
       padding-right: 0px; }
 
 .page {
@@ -585,7 +585,7 @@ body {
       margin-left: 10px; }
       .archive .archive_post:hover .archive_time,
       .archive .archive_post:hover a {
-        color: rgba(54, 141, 203, 0.801); }
+        color: rgba(43, 122, 128, 0.808); }
 
 .about {
   min-height: 1200px;
