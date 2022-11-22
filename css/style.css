@@ -607,10 +607,52 @@ body {
       height: auto;
       opacity: 1; }
 
-.myImg {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center; }
+.post_content h1 {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  margin-top: 1.2em; }
+
+.post_content h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  margin-top: 1.2em; }
+
+.post_content h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  margin-top: 1.2em; }
+
+.post_content h4 {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  margin-top: 1.2em; }
+
+.post_content h5 {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  margin-top: 1.2em; }
+
+.post_content h6 {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  margin-top: 1.2em; }
+
+.post_content blockquote {
+  margin: 2em 0;
+  padding-left: 10px;
+  position: relative;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+  border-left: 2px solid #aaa; }
+  .post_content blockquote p {
+    margin: 0 0; }
+
+.post_content img {
+  display: inline-block;
+  max-width: 100%; }
