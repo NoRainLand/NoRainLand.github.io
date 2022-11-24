@@ -592,13 +592,28 @@ body {
   max-width: 1100px;
   margin: 0 auto; }
   .about .about_title,
-  .about .about_author {
+  .about .about_author,
+  .about .about_site,
+  .about .about_links,
+  .about .about_date {
     margin: 10px auto;
     font-size: 1.6rem;
     color: rgba(0, 0, 0, 0.75); }
-  .about .about_description {
+  .about .about_description,
+  .about .site,
+  .about .links {
     margin: 10px auto;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.75); }
+  .about .date {
+    margin: 10px auto;
+    font-size: 1.5rem;
+    display: flex; }
+    .about .date .hour {
+      color: #137a7f; }
+    .about .date .tips {
+      width: 20px;
+      text-align: center; }
   .about .about_img {
     width: 100%;
     margin: 0 auto; }
@@ -656,3 +671,15 @@ body {
 .post_content img {
   display: inline-block;
   max-width: 100%; }
+
+.miku .tips1 {
+  color: #373b3e; }
+
+.miku .tips2 {
+  color: #bec8d1; }
+
+.miku .min1 {
+  color: #86cecb; }
+
+.miku .min2 {
+  color: #e12885; }
