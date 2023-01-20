@@ -3,6 +3,7 @@
 
 	var Theme = {};
 
+	//回到顶部
 	Theme.backToTop = {
 		register: function () {
 			let $backToTop = $("#back_to_top");
@@ -19,7 +20,7 @@
 			});
 		},
 	};
-
+	//修改全局日期
 	Theme.getDate = {
 		register: function () {
 			$(".post_time").each(function (index, item) {
