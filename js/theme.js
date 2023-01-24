@@ -20,6 +20,23 @@
 			});
 		},
 	};
+
+	//浮动tags以及header
+	// Theme.floatTags = {
+	// 	register: function () {
+	// 		let $tags = $("#list_tags")[0];
+	// 		// let $header = $("#header")[0];
+	// 		if ($tags) {
+	// 			let sTop = 0;
+	// 			$(window).on("scroll", function () {
+	// 				sTop = $(window).scrollTop();
+	// 				// console.log($tags.offsetTop, sTop);
+	// 				// $tags.style.top = sTop + "px";
+	// 				// $header.style.top = sTop + "px";
+	// 			});
+	// 		}
+	// 	},
+	// };
 	//修改全局日期
 	Theme.getDate = {
 		register: function () {
