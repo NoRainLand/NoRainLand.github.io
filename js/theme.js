@@ -69,7 +69,7 @@
 			window.verseDate = Number(window.localStorage.getItem("verseDate"));
 			//检查时间戳
 			let now = Date.parse(new Date());
-			if (window.verseDate == 0 || now - window.verseDate > 20000) {
+			if (window.verseDate == 0 || now - window.verseDate > 86400000) {
 				Theme.ranVerse.loadVersion();
 			} else {
 				window.verse = JSON.parse(window.localStorage.getItem("verse"));
