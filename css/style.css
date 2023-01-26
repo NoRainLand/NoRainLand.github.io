@@ -57,20 +57,30 @@ body {
 
 .mainbody {
   border-top: solid rgba(212, 212, 212, 0.443) 1px; }
+  .mainbody .post_content a {
+    text-decoration: none;
+    color: #86cecb; }
+  .mainbody del {
+    text-decoration: line-through;
+    text-decoration-thickness: 10%;
+    text-decoration-color: #373b3e; }
 
 .header {
   margin: 0 auto;
   padding: 0 10px;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  max-width: 1100px; }
+  max-width: 1100px;
+  height: 64px; }
   .header .logo {
-    margin: 0; }
+    margin: 0;
+    position: relative;
+    float: left; }
     .header .logo .title {
       text-decoration: none;
       color: #137a7f;
-      font-size: 2rem; }
+      font-size: 2.5rem; }
+  .header .nav_top {
+    position: relative;
+    float: right; }
   .header .archives {
     text-decoration: none;
     color: #969696;
@@ -167,7 +177,8 @@ body {
 .list_tags {
   float: right;
   width: 19%;
-  padding-top: 40px; }
+  padding-top: 40px;
+  top: 0px; }
   .list_tags .list_title {
     color: rgba(0, 0, 0, 0.75);
     font-size: 2rem;

@@ -63,15 +63,58 @@
 			});
 		},
 	};
-
+	/**随机诗句 */
 	Theme.ranVerse = {
 		register: function () {
-			window.verse = JSON.parse(window.localStorage.getItem("verse"));
-			if (!window.verse) {
-				window.verse = [];
+			window.verseDate = Number(window.localStorage.getItem("verseDate"));
+			//检查时间戳
+			let now = Date.parse(new Date());
+			if (window.verseDate == 0 || now - window.verseDate > 20000) {
+				Theme.ranVerse.loadVersion();
+			} else {
+				window.verse = JSON.parse(window.localStorage.getItem("verse"));
+				if (!window.verse || window.verse.length == 0) {
+					Theme.ranVerse.loadVerse();
+				} else {
+					Theme.ranVerse.random();
+				}
 			}
-			if (window.verse.length == 0) {
-				$.get("/text/verse.text", function (data) {
+		},
+
+		//尝试更新版本
+		loadVersion: function () {
+			$.get("/text/VerseVersion.json", function (data) {
+				window.verseDate = Date.parse(new Date());
+				window.localStorage.setItem("verseDate", window.verseDate);
+				window.verseUrl = data.verseUrl;
+				window.localStorage.setItem("verseUrl", window.verseUrl);
+				window.verseVersion = window.localStorage.getItem("verseVersion");
+				if (
+					window.verseVersion == null ||
+					window.verseVersion < data.verseVersion
+				) {
+					window.verseVersion = data.verseVersion;
+					window.localStorage.setItem("verseVersion", window.verseVersion);
+					Theme.ranVerse.loadVerse();
+				} else {
+					//懒得检查了.--- 还是检查以下吧.
+					window.verse = JSON.parse(window.localStorage.getItem("verse"));
+					if (!window.verse || window.verse.length == 0) {
+						Theme.ranVerse.loadVerse();
+					} else {
+						Theme.ranVerse.random();
+					}
+				}
+			});
+		},
+		//尝试更新诗句
+		loadVerse: function () {
+			window.verseUrl = window.localStorage.getItem("verseUrl");
+			if (!window.verseUrl) {
+				Theme.ranVerse.loadVersion();
+			} else {
+				window.verse = [];
+				$.get(window.verseUrl, function (data) {
 					var lines = data.split("\n"); //按行读取
 					$.each(lines, function (i, v) {
 						if (!!v && v != "\r") {
@@ -81,8 +124,6 @@
 					window.localStorage.setItem("verse", JSON.stringify(window.verse));
 					Theme.ranVerse.random();
 				});
-			} else {
-				Theme.ranVerse.random();
 			}
 		},
 		random: function () {
