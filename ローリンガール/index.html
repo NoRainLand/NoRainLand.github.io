@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="UnknownMotherGoose"><meta name="Keywords" content="UnknownMotherGoose"><meta name="Robots" contect="all"><meta name="google-site-verification" content="-JpC1LgBb47SU_CHMdZx7RdIvgfMrnAKoHB_UlroSFM"><title>ローリンガール - Unkwn</title><link rel="Bookmark" type="image/x-icon" href="/img/favicon.ico"><link rel="icon" type="image/x-icon" href="/img/favicon.ico"><link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico"><link rel="stylesheet" href="/js/prism/prism.css"><link rel="stylesheet" href="/css/style.css"><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/theme.js"></script><meta name="generator" content="Hexo 6.3.0"></head><body><header><div class="header" id="header"><div class="logo"><a href="/" class="title">UnknownMotherGoose</a></div><div id="nav_top" class="nav_top"><ul id="menu_tip"><li id="menu_item"><a href="/archives" class="archives">Archive</a></li><li id="menu_item"><a href="/about" class="about">About</a></li></ul></div></div></header><div class="mainbody"><div class="page"><header class="page_title">ローリンガール</header><div class="post_meta"><time class="post_time" id="post_time">2023-03-25</time></div><div class="post_content"><p>——我翻滚也要翻滚到你的面前。</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=22699098&auto=0&height=32"></iframe><img src="work.jpg"><h2 id="Step1-找个模型"><a href="#Step1-找个模型" class="headerlink" title="Step1:找个模型"></a>Step1:找个模型</h2><p>google输入miku模型，随意挑一个喜欢的就好。</p><h2 id="Step2-弄进CC里边去"><a href="#Step2-弄进CC里边去" class="headerlink" title="Step2:弄进CC里边去"></a>Step2:弄进CC里边去</h2><p>这部分挺扯淡的，因为能找到的miku模型好多都是mmd的，这时候有一大堆问题需要处理的。最后放弃了，即使是最简单的<a target="_blank" rel="noopener" href="https://space.bilibili.com/1688240/dynamic">YYB Hatsune Miku_default_3</a> 都有80M+的体积，面数还死多。行，那我就自己做一个吧。</p><h2 id="Step3-自己设计一个Q版miku"><a href="#Step3-自己设计一个Q版miku" class="headerlink" title="Step3:自己设计一个Q版miku"></a>Step3:自己设计一个Q版miku</h2><p>打开体素工具<a target="_blank" rel="noopener" href="https://ephtracy.github.io/">MagicaVoxel</a>，开干。</p><p>经过一系列的拙劣的模仿，终于弄出来一个像样的……fufu？</p><img src="fufu1.jpg"> <img src="fufu2.jpg"><p><a href="mikuQ.vox">源文件</a>也放出来供各位使用吧。</p><h2 id="Step4-先弄进Unity里边去"><a href="#Step4-先弄进Unity里边去" class="headerlink" title="Step4:先弄进Unity里边去"></a>Step4:先弄进Unity里边去</h2><p>怎么弄呢？很简单，直接导——个鬼哟，还要绑骨骼刷权重呢。这时候就应该使出钞能力。</p><p>购买这个插件<a href="voxel-importer">voxel-importer</a>，至于插件，还是自己购买吧。我就不分享了。</p><p>然后就是按照教程一步一步生成，绑定骨骼，刷权重。（这两头发刷起来真恶心）</p><p>然后记得先保存成预设，这时候就可以使用unity的插件导出FBX。</p><h2 id="Step5-新问题，texture2d是什么东西？"><a href="#Step5-新问题，texture2d是什么东西？" class="headerlink" title="Step5:新问题，texture2d是什么东西？"></a>Step5:新问题，texture2d是什么东西？</h2><p>emmm，cc不支持texture2d格式啊，那么写个代码转一下吧。</p><pre class="line-numbers language-Csharp" data-language="Csharp"><div class="caption"><span>Texture2D_IMG.cs</span></div><code class="language-Csharp">using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
+
+public class Texture2D_IMG : MonoBehaviour
+&#123;
+
+    public Texture2D texture2D;
+
+    string path &#x3D; &quot;&quot;;
+    void Start()
+    &#123;
+        saveTexture2D(texture2D);
+    &#125;
+
+    public void saveTexture2D(Texture2D texture)
+    &#123;
+        path &#x3D; AssetDatabase.GetAssetPath(texture);
+        if (!string.IsNullOrEmpty(path) &amp;&amp; File.Exists(path))
+        &#123;
+            path &#x3D; Path.GetDirectoryName(path);
+        &#125;
+        else
+        &#123;
+            path &#x3D; Application.dataPath;
+        &#125;
+        byte[] bytes &#x3D; texture.EncodeToPNG();
+        Debug.Log(path);
+        string name &#x3D; texture.name;
+        &#x2F;&#x2F; UnityEngine.Object.Destroy(texture);
+        System.IO.File.WriteAllBytes(path + &quot;&#x2F;&quot; + name + &quot;.png&quot;, bytes);
+        Debug.Log(&quot;write to File over&quot;);
+        UnityEditor.AssetDatabase.Refresh(); &#x2F;&#x2F;自动刷新资源
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>然后把导出来的图片丢进PS里边，选择图像-图像大小-硬边缘，并且放大一点。虽然说有误差，（有些边缘被不正常地放大缩小了，但是起码不模糊了）</p><h2 id="Step6-好的，现在准备一下动画"><a href="#Step6-好的，现在准备一下动画" class="headerlink" title="Step6:好的，现在准备一下动画"></a>Step6:好的，现在准备一下动画</h2><p>直接去<a target="_blank" rel="noopener" href="https://www.mixamo.com/">mixamo</a>白嫖就好，记得挂梯子。</p><p>如果提示失败什么的，多上传几次fbx模型就好。</p><p>PS:下载动画的时候选择without skin。</p><p>然后就是导入unity，放好并且编辑好动画（其他编辑器太烂了。）</p><p>然后重新导出为FBX。</p><img src="runfast.jpg"><h2 id="Step7-导入到CC"><a href="#Step7-导入到CC" class="headerlink" title="Step7:导入到CC"></a>Step7:导入到CC</h2><p>这一步很简单，但是我不了解CC，还是先去看一遍文档吧。</p></div></div><div class="guide_pager"><a class="page_next" href="/%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA/">海阔天空 ></a></div></div><footer><div class="footer"><div class="verse">山有木兮木有枝，心悦君兮君不知。</div><span class="copyright_year">©️ 2022- 2023 <span class="footer_author">NoRain</span> <span class="power_by">Powered by <a class="hexo_link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> and <a class="theme_link" target="_blank" rel="noopener" href="https://github.com/NoRainLand">NoRainLand</a></span></span></div></footer><div class="back_to_top" id="back_to_top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="arrow_up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></body><script src="/js/bootstrap.js"></script><script src="/js/prism/prism.js"></script></html>
