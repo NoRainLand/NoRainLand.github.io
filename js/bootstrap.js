@@ -4,4 +4,5 @@ $(document).ready(function () {
 	Theme.getArchiveDate.register();
 	Theme.ranVerse.register();
 	// Theme.floatTags.register();
+	Theme.addHeimuTitle.register();
 });

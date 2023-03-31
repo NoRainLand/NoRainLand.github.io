@@ -63,6 +63,13 @@
 			});
 		},
 	};
+	/**添加黑幕title */
+	Theme.addHeimuTitle = {
+		register: function () {
+			$(".heimu").attr("title","你知道太多啦~");
+		},
+	};
+
 	/**随机诗句 */
 	Theme.ranVerse = {
 		register: function () {
