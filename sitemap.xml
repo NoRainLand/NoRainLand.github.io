@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unknownmothergoose.com/404.html</loc>
+    
+    <lastmod>2023-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://unknownmothergoose.com/%E7%82%89%E5%BF%83%E8%9E%8D%E8%A7%A3/</loc>
     
     <lastmod>2023-04-02</lastmod>
@@ -471,15 +480,6 @@
   
   <url>
     <loc>https://unknownmothergoose.com/Main-Menu/</loc>
-    
-    <lastmod>2023-02-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://unknownmothergoose.com/404.html</loc>
     
     <lastmod>2023-02-04</lastmod>
     
