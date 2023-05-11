@@ -1,4 +1,4 @@
-var canvas = document.getElementById("canvas");
+<html><head></head><body>var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d"); //2d用单引用括起来
 
 //获取图像的数据URL
@@ -56,3 +56,4 @@ context.arc(256, 330, 80, Math.PI + foot3, 2 * Math.PI - foot3, false);
 context.strokeStyle = "black";
 context.stroke();
 
+</body></html>

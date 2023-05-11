@@ -1,4 +1,4 @@
-/*
+<html><head></head><body>/*
  * @Author: NoRain
  * @Date: 2022-11-13 11:40:29
  * @Last Modified by: NoRain
@@ -15,3 +15,4 @@ class TestCode {
 	}
 	close() {}
 }
+</body></html>

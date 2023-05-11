@@ -15,7 +15,7 @@
 
 	Miku.console = {
 		register: function () {
-			console.log(`%c ${MIKU39}`, " color: #137a7f  ; font-size: 20px;");
+			console.log(`%c ${MIKU39}`, " color: #137a7f; font-size: 20px;");
 		},
 	};
 	Miku.console2 = {
