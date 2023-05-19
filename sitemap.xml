@@ -596,7 +596,7 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/index.html</loc>
+    <loc>https://unknownmothergoose.com/series/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -605,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/series/index.html</loc>
+    <loc>https://unknownmothergoose.com/tags/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -767,14 +767,14 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/%E5%90%8C%E4%BA%BA%E6%96%87/</loc>
+    <loc>https://unknownmothergoose.com/tags/%E8%87%AA%E5%82%B7%E7%84%A1%E9%9B%A8/</loc>
     <lastmod>2023-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/%E8%87%AA%E5%82%B7%E7%84%A1%E9%9B%A8/</loc>
+    <loc>https://unknownmothergoose.com/tags/%E5%90%8C%E4%BA%BA%E6%96%87/</loc>
     <lastmod>2023-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
