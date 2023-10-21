@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>unknown</title>
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                overflow: hidden;
+                position: relative;
+                .content {
+                    width: 100vw;
+                    height: 100vh;
+                    background-size: cover;
+                }
+                #rainBox {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    pointer-events: none;
+                }
+                #unknown {
+                    width: 20%;
+                    min-width: 250px;
+                    position: absolute;
+                    top: 40%;
+                    left: 40%;
+                    margin-top: -50px;
+                    margin-left: -50px;
+                }
+                .rain {
+                    position: absolute;
+                    width: 2px;
+                    height: 50px;
+                    background: linear-gradient(rgba(80, 80, 80, 0.3), rgba(2, 2, 2, 0.6));
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div id="rainBox"></div>
+        </div>
+        <img src="unknown/unknown.png" id="unknown">
+        <script>
+            var rainpool = [];
+            const box = document.getElementById("rainBox");
+            let boxHeight = box.clientHeight;
+            let boxWidth = box.clientWidth;
+            window.onload = function () {
+                boxHeight = box.clientHeight;
+                boxWidth = box.clientWidth;
+            };
+            setInterval(() => {
+                const rain = rainpool.pop() || document.createElement("div");
+                rain.classList.add("rain");
+                rain.style.top = 0;
+                rain.style.left = Math.random() * boxWidth + "px";
+                rain.style.opacity = Math.random();
+                box.appendChild(rain);
+                let race = 1;
+                const timer = setInterval(() => {
+                    if (parseInt(rain.style.top) > boxHeight) {
+                        clearInterval(timer);
+                        box.removeChild(rain);
+                        rainpool.push(rain);
+                    }
+                    race++;
+                    rain.style.top = parseInt(rain.style.top) + race + "px";
+                }, 20);
+            }, 50);
+        </script>
+    
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
