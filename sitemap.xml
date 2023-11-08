@@ -848,7 +848,7 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/index.html</loc>
+    <loc>https://unknownmothergoose.com/series/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -857,7 +857,7 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/series/index.html</loc>
+    <loc>https://unknownmothergoose.com/tags/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -970,14 +970,14 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/osu/</loc>
+    <loc>https://unknownmothergoose.com/tags/hexo/</loc>
     <lastmod>2023-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/hexo/</loc>
+    <loc>https://unknownmothergoose.com/tags/osu/</loc>
     <lastmod>2023-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
