@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://unknownmothergoose.com/%E4%B8%80%E7%95%AA%E8%A1%97%E3%82%B3%E3%82%B9%E3%83%A2%E3%83%8A%E3%82%A6%E3%83%88/</loc>
+    <loc>https://unknownmothergoose.com/%E5%8E%9F%E7%A5%9E%EF%BC%8C%E5%90%AF%E5%8A%A8%EF%BC%81.html</loc>
     
     <lastmod>2023-11-24</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/%E5%8E%9F%E7%A5%9E%EF%BC%8C%E5%90%AF%E5%8A%A8%EF%BC%81.html</loc>
+    <loc>https://unknownmothergoose.com/%E4%B8%80%E7%95%AA%E8%A1%97%E3%82%B3%E3%82%B9%E3%83%A2%E3%83%8A%E3%82%A6%E3%83%88/</loc>
     
     <lastmod>2023-11-24</lastmod>
     
@@ -884,7 +884,7 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/series/index.html</loc>
+    <loc>https://unknownmothergoose.com/tags/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -893,7 +893,7 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/index.html</loc>
+    <loc>https://unknownmothergoose.com/series/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -1020,14 +1020,14 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/%E5%A4%A9%E5%BF%83%E8%BE%BD%E9%98%94/</loc>
+    <loc>https://unknownmothergoose.com/tags/H5/</loc>
     <lastmod>2023-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/H5/</loc>
+    <loc>https://unknownmothergoose.com/tags/%E5%A4%A9%E5%BF%83%E8%BE%BD%E9%98%94/</loc>
     <lastmod>2023-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1041,14 +1041,14 @@
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/%E9%87%8D%E6%95%B4%E6%97%97%E9%BC%93/</loc>
+    <loc>https://unknownmothergoose.com/tags/%E6%B5%AA%E6%BC%AB/</loc>
     <lastmod>2023-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://unknownmothergoose.com/tags/%E6%B5%AA%E6%BC%AB/</loc>
+    <loc>https://unknownmothergoose.com/tags/%E9%87%8D%E6%95%B4%E6%97%97%E9%BC%93/</loc>
     <lastmod>2023-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
