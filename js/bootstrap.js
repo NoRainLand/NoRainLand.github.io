@@ -5,5 +5,4 @@ $(document).ready(function () {
 	Theme.ranVerse.register();
 	// Theme.floatTags.register();
 	Theme.addHeimuTitle.register();
-	Miku.console.register();
 });
