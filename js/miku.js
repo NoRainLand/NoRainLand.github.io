@@ -1,32 +1,5 @@
-(function () {
-	"use strict";
-
-	var Miku = {};
-
-	var MIKU39 = `
-     _____ ______   ___  ___  __    ___  ___  ________  ________
-     |\\   _ \\  _   \\|\\  \\|\\  \\|\\  \\ |\\  \\|\\  \\|\\_____  \\|\\  ___  \\
-     \\ \\  \\\\\\__\\ \\  \\ \\  \\ \\  \\/  /|\\ \\  \\\\\\  \\|____|\\ /\\ \\____   \\
-      \\ \\  \\\\|__| \\  \\ \\  \\ \\   ___  \\ \\  \\\\\\  \\    \\|\\  \\|____|\\  \\
-       \\ \\  \\    \\ \\  \\ \\  \\ \\  \\\\ \\  \\ \\  \\\\\\  \\  __\\_\\  \\  __\\_\\  \\
-        \\ \\__\\    \\ \\__\\ \\__\\ \\__\\\\ \\__\\ \\_______\\|\\_______\\|\\_______\\
-         \\|__|     \\|__|\\|__|\\|__| \\|__|\\|_______|\\|_______|\\|_______|
-    `;
-
-	Miku.console = {
-		register: function () {
-			console.log(`%c ${MIKU39}`, " color: #137a7f; font-size: 20px;");
-		},
-	};
-	Miku.console2 = {
-		register: function () {
-			console.log(
-				"%c miku%c39 ",
-				"background: #525658; color: #137a7f ; font-size: 200px;",
-				"background: #525658; color: #e12885 ; font-size: 200px;"
-			);
-		},
-	};
-
-	this.Miku = Miku;
-}.call(this));
+// setTimeout(() => {
+// 	console.log("bgchange");
+// 	$("body").css("background-image", "url('../img/mainbg.jpg')");
+// 	// $(this).css("background-image","url(on.jpg)");
+// }, 5000);

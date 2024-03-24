@@ -42,7 +42,9 @@
 		register: function () {
 			$(".post_time").each(function (index, item) {
 				let time = $(this).text();
-				let chinaDateArray = new Date(time.replace(/-/g, "/")).toDateString().split(" ");
+				let chinaDateArray = new Date(time.replace(/-/g, "/"))
+					.toDateString()
+					.split(" ");
 				let newTime = `${chinaDateArray[1]} ${chinaDateArray[2]} ${chinaDateArray[3]}`;
 				$(this).text(newTime);
 			});
@@ -53,7 +55,9 @@
 		register: function () {
 			$(".archive_time").each(function (index, item) {
 				let time = $(this).text();
-				let chinaDateArray = new Date(time.replace(/-/g, "/")).toDateString().split(" ");
+				let chinaDateArray = new Date(time.replace(/-/g, "/"))
+					.toDateString()
+					.split(" ");
 				let newTime = `${chinaDateArray[1]} ${chinaDateArray[2]}`;
 				$(this).text(newTime);
 			});
@@ -62,7 +66,7 @@
 	/**添加黑幕title */
 	Theme.addHeimuTitle = {
 		register: function () {
-			$(".heimu").attr("title", "你知道太多啦~");
+			$(".heimu").attr("title","你知道太多啦~");
 		},
 	};
 
@@ -92,7 +96,10 @@
 				window.verseUrl = data.verseUrl;
 				window.localStorage.setItem("verseUrl", window.verseUrl);
 				window.verseVersion = window.localStorage.getItem("verseVersion");
-				if (window.verseVersion == null || window.verseVersion < data.verseVersion) {
+				if (
+					window.verseVersion == null ||
+					window.verseVersion < data.verseVersion
+				) {
 					window.verseVersion = data.verseVersion;
 					window.localStorage.setItem("verseVersion", window.verseVersion);
 					Theme.ranVerse.loadVerse();
@@ -127,22 +134,11 @@
 			}
 		},
 		random: function () {
-			$(".verse").text(window.verse[Math.floor(Math.random() * window.verse.length)]);
-		},
-	};
-
-	Theme.showImgAlt = {
-		register: function () {
-			$(document).ready(function() {
-				$('p img').each(function() {
-					var altText = $(this).attr('alt');
-					if (altText) {
-						$('<p>').addClass('imgAlt').text(altText).appendTo($(this).parent());
-					}
-				});
-			});
+			$(".verse").text(
+				window.verse[Math.floor(Math.random() * window.verse.length)]
+			);
 		},
 	};
 
 	this.Theme = Theme;
-}).call(this);
+}.call(this));
