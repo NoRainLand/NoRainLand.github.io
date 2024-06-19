@@ -1,9 +1,9 @@
 (function () {
 	"use strict";
 
-	var Miku = {};
+	let Miku39 = {};
 
-	var MIKU39 = `
+	let mikumiku = `
      _____ ______   ___  ___  __    ___  ___  ________  ________
      |\\   _ \\  _   \\|\\  \\|\\  \\|\\  \\ |\\  \\|\\  \\|\\_____  \\|\\  ___  \\
      \\ \\  \\\\\\__\\ \\  \\ \\  \\ \\  \\/  /|\\ \\  \\\\\\  \\|____|\\ /\\ \\____   \\
@@ -13,20 +13,9 @@
          \\|__|     \\|__|\\|__|\\|__| \\|__|\\|_______|\\|_______|\\|_______|
     `;
 
-	Miku.console = {
-		register: function () {
-			console.log(`%c ${MIKU39}`, " color: #137a7f; font-size: 20px;");
-		},
+	Miku39.showConsole = () => {
+		console.clear();
+		console.log(`%c ${mikumiku}`, " color: #137a7f; font-size: 20px;");
 	};
-	Miku.console2 = {
-		register: function () {
-			console.log(
-				"%c miku%c39 ",
-				"background: #525658; color: #137a7f ; font-size: 200px;",
-				"background: #525658; color: #e12885 ; font-size: 200px;"
-			);
-		},
-	};
-
-	this.Miku = Miku;
-}.call(this));
+	window.Miku39 = Miku39;
+})();

@@ -1,10 +1,10 @@
 $(document).ready(function () {
-	Theme.backToTop.register();
-	Theme.getDate.register();
-	Theme.getArchiveDate.register();
+	Theme.backToTop();
+	Theme.getDate();
+	Theme.getArchiveDate();
 	Theme.ranVerse.register();
-	// Theme.floatTags.register();
-	Theme.addHeimuTitle.register();
-	Miku.console.register();
-	Theme.showImgAlt.register();
+	Theme.addHeimuTitle();
+	Theme.showImgAlt();
+	Theme.changePager();
+	Miku39.showConsole();
 });

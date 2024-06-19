@@ -4,70 +4,47 @@
 	var Theme = {};
 
 	//回到顶部
-	Theme.backToTop = {
-		register: function () {
-			let $backToTop = $("#back_to_top");
-			$(window).on("scroll", function () {
-				if ($(window).scrollTop() > 100) {
-					$backToTop.fadeIn(1000);
-				} else {
-					$backToTop.fadeOut(1000);
-				}
-			});
+	Theme.backToTop = () => {
+		let $backToTop = $("#back_to_top");
+		$(window).on("scroll", function () {
+			if ($(window).scrollTop() > 100) {
+				$backToTop.fadeIn(1000);
+			} else {
+				$backToTop.fadeOut(1000);
+			}
+		});
 
-			$backToTop.on("click", function () {
-				$("body,html").animate({ scrollTop: 0 });
-			});
-		},
+		$backToTop.on("click", function () {
+			$("body,html").animate({ scrollTop: 0 });
+		});
 	};
 
-	//浮动tags以及header
-	// Theme.floatTags = {
-	// 	register: function () {
-	// 		let $tags = $("#list_tags")[0];
-	// 		// let $header = $("#header")[0];
-	// 		if ($tags) {
-	// 			let sTop = 0;
-	// 			$(window).on("scroll", function () {
-	// 				sTop = $(window).scrollTop();
-	// 				// console.log($tags.offsetTop, sTop);
-	// 				// $tags.style.top = sTop + "px";
-	// 				// $header.style.top = sTop + "px";
-	// 			});
-	// 		}
-	// 	},
-	// };
 	//修改全局日期
-	Theme.getDate = {
-		register: function () {
-			$(".post_time").each(function (index, item) {
-				let time = $(this).text();
-				let chinaDateArray = new Date(time.replace(/-/g, "/")).toDateString().split(" ");
-				let newTime = `${chinaDateArray[1]} ${chinaDateArray[2]} ${chinaDateArray[3]}`;
-				$(this).text(newTime);
-			});
-		},
+	Theme.getDate = () => {
+		$(".post_time").each(function (index, item) {
+			let time = $(this).text();
+			let chinaDateArray = new Date(time.replace(/-/g, "/")).toDateString().split(" ");
+			let newTime = `${chinaDateArray[1]} ${chinaDateArray[2]} ${chinaDateArray[3]}`;
+			$(this).text(newTime);
+		});
 	};
 
-	Theme.getArchiveDate = {
-		register: function () {
-			$(".archive_time").each(function (index, item) {
-				let time = $(this).text();
-				let chinaDateArray = new Date(time.replace(/-/g, "/")).toDateString().split(" ");
-				let newTime = `${chinaDateArray[1]} ${chinaDateArray[2]}`;
-				$(this).text(newTime);
-			});
-		},
+	Theme.getArchiveDate = () => {
+		$(".archive_time").each(function (index, item) {
+			let time = $(this).text();
+			let chinaDateArray = new Date(time.replace(/-/g, "/")).toDateString().split(" ");
+			let newTime = `${chinaDateArray[1]} ${chinaDateArray[2]}`;
+			$(this).text(newTime);
+		});
 	};
 	/**添加黑幕title */
-	Theme.addHeimuTitle = {
-		register: function () {
-			$(".heimu").attr("title", "你知道太多啦~");
-		},
+	Theme.addHeimuTitle = () => {
+		$(".heimu").attr("title", "你知道太多啦~");
 	};
 
 	/**随机诗句 */
 	Theme.ranVerse = {
+		//注册
 		register: function () {
 			window.verseDate = Number(window.localStorage.getItem("verseDate"));
 			//检查时间戳
@@ -126,23 +103,73 @@
 				});
 			}
 		},
+		//随机诗句
 		random: function () {
 			$(".verse").text(window.verse[Math.floor(Math.random() * window.verse.length)]);
 		},
 	};
 
-	Theme.showImgAlt = {
-		register: function () {
-			$(document).ready(function() {
-				$('p img').each(function() {
-					var altText = $(this).attr('alt');
-					if (altText) {
-						$('<p>').addClass('imgAlt').text(altText).appendTo($(this).parent());
-					}
-				});
+	/**展示图片的Alt信息 */
+	Theme.showImgAlt = () => {
+		$(document).ready(function () {
+			$("p img").each(function () {
+				var altText = $(this).attr("alt");
+				if (altText) {
+					$("<p>").addClass("imgAlt").text(altText).appendTo($(this).parent());
+				}
 			});
-		},
+		});
 	};
 
-	this.Theme = Theme;
-}).call(this);
+	Theme.getEllipsisText = (element) => {
+		let style = window.getComputedStyle(element);
+		let maxWidth = parseFloat(style.maxWidth);
+		let text = $(element).text();
+		let ellipsisText = text;
+
+		let testElement = window.testElement || (window.testElement = document.createElement("div"));
+
+		testElement.style.fontFamily = style.fontFamily;
+		testElement.style.fontSize = style.fontSize;
+		testElement.style.fontWeight = style.fontWeight;
+		testElement.style.fontStyle = style.fontStyle;
+		testElement.style.maxWidth = style.maxWidth;
+		testElement.style.whiteSpace = "nowrap";
+
+		document.body.appendChild(testElement);
+
+		$(testElement).text(text);
+		if (testElement.scrollWidth <= maxWidth) {
+			ellipsisText = text;
+		} else {
+			for (let i = text.length; i > 0; i--) {
+				let testText = text.substring(0, i) + "...";
+				$(testElement).text(testText);
+				if (testElement.scrollWidth <= maxWidth) {
+					ellipsisText = text.substring(0, i - 2) + "...";
+					break;
+				}
+			}
+		}
+
+		document.body.removeChild(testElement);
+		return ellipsisText;
+	};
+
+	Theme.changePager = () => {
+		$(".page_prev").ready(function () {
+			$(".page_prev").each(function (index, item) {
+				let ellipsisText = Theme.getEllipsisText(item);
+				$(item).text("< " + ellipsisText);
+			});
+		});
+		$(".page_next").ready(function () {
+			$(".page_next").each(function (index, item) {
+				let ellipsisText = Theme.getEllipsisText(item);
+				$(item).text(ellipsisText + " >");
+			});
+		});
+	};
+
+	window.Theme = Theme;
+})();
