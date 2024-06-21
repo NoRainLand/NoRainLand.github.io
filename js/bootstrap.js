@@ -7,4 +7,5 @@ $(document).ready(function () {
 	Theme.showImgAlt();
 	Theme.changePager();
 	Miku39.showConsole();
+	Miku39.showHazyMoon();
 });
